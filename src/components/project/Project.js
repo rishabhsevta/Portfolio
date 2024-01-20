@@ -12,6 +12,7 @@ const Project = ()=>{
     
 
 const handleChange =async(e)=>{
+  setIsChecked(isChecked?false:true);
   try{
     setIsLoading(true);
     let data = await fetch('http://127.0.0.1:3000/project/control',{
