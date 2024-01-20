@@ -1,0 +1,77 @@
+.project-main{
+   display: flex;
+    height: 100vh;
+    width: 100vw;
+    background-color:#333;
+    justify-content: center;
+    align-items: center;
+}
+.project-main label{
+    position: relative;
+    top:-150px;
+    width:150px;
+    height: 75px;
+    background-color: #212121;
+    border-radius: 10px;
+}
+.project-main label >span{
+    position: absolute;
+    top: 0;
+    left:0;
+    width: 75px;
+    height: 63px;
+    background-color: #333;
+    border: 6px solid #212121;
+    border-radius: 14px;
+    cursor: pointer;
+    transition: 0.5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.project-main label input{
+    appearance: none;
+}
+label input:checked ~span{
+    left: 64px;
+}
+label span .bulb-icon{
+    color: rgba(255,255,255,0.25);
+    font-size: 2em;
+}
+
+label input:checked ~span .bulb-icon{
+    color:rgba(255,255,255,1);
+    filter: drop-shadow(0 0 5px #fff) drop-shadow(0 0 10px #fff) drop-shadow(0 0 15px #fff)
+}
+
+.bulb-off,.bulb-on{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 150px;
+    width: 150px;
+    pointer-events: none;
+    background-size: contain;
+    transition: 0.5s;
+}
+
+.bulb-off{
+    background-image: url(bulb_off.jpg);
+}
+
+.bulb-on {
+    background-image: url(bulb_on.jpg);
+}
+
+
+.project-main .loading{
+    color: red;
+    position: relative;
+    height: 30px;
+    width: 30px;
+    right: 33.5px;
+    border: 3px solid red;
+    border-radius: 100%;
+}
