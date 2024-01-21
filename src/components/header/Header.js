@@ -1,8 +1,6 @@
 import "./header.css";
 import { Link, useLocation } from "react-router-dom";
 
-// import { useState, useEffect } from "react";
-
 const Header = () => {
     const location = useLocation().pathname;
     return (

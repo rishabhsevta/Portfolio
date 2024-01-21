@@ -11,6 +11,7 @@ const Certificates =()=>{
             <Link to={constants.CHICMIC_CERTIFICATE} target='_blank'><img src={image} className='small-image'/></Link>
             <Link to={constants.CHICMIC_CERTIFICATE} target='_blank'><img src={image} className='small-image'/></Link>
             <Link to={constants.CHICMIC_CERTIFICATE} target='_blank'><img src={image} className='small-image'/></Link>
+            <Link to={constants.CHICMIC_CERTIFICATE} target='_blank'><img src={image} className='small-image'/></Link>
         </div>
     )
 }

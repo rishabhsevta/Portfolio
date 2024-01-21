@@ -1,21 +1,18 @@
 import { BsLightbulb } from "react-icons/bs";
 import './project.css';
 import { useState } from "react";
+import constants from "../../constants/constants";
 
-import { initializeApp } from "firebase/app";
-import { getDatabase, ref, set } from "firebase/database";
 import Project_header from "./project_header/Project_header";
 
 const Project = ()=>{
-    const [isChecked,setIsChecked] = useState(false);
-    const [isLoading, setIsLoading] = useState(false);
-    
+    const [isChecked,setIsChecked] = useState(false);    
 
 const handleChange =async(e)=>{
   setIsChecked(isChecked?false:true);
   try{
     setIsLoading(true);
-    let data = await fetch('http://127.0.0.1:3000/project/control',{
+    let data = await fetch(constants.API,{
     method:'PUT',
     headers: {
       'Content-Type': 'application/json',
@@ -23,7 +20,6 @@ const handleChange =async(e)=>{
     body:JSON.stringify({"value":e.target.value})
   });
     data = await data.json();
-    // console.log(data);
   }
   catch(err){
     console.log(err);

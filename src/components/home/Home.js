@@ -1,14 +1,15 @@
 import { Link } from "react-router-dom";
-import "./home.css";
-import rishabh from './rishabhsevta.jpeg'
+import rishabh from './rishabhsevta.jpeg';
 import {FaHeart,FaInstagram,FaLinkedinIn,FaGithub,FaFacebook} from 'react-icons/fa';
 import axios from "axios";
+import "./home.css";
+import constants from "../../constants/constants";
 
 const Home = () => {
 
     const handleDownloadCv = ()=>{
         const fun = async()=>{
-            const response = await axios.get('https://res.cloudinary.com/dehaame7e/image/upload/v1704636845/Rishabh_resume_k0ff4w.jpg',{responseType:'blob'});
+            const response = await axios.get(constants.RESUME,{responseType:'blob'});
             const blob = new Blob([response.data],{type:response.headers['content-type']});
             const url = window.URL.createObjectURL(blob);
               const link = document.createElement('a');
@@ -26,10 +27,10 @@ const Home = () => {
             <div className="box1">
                 <img className="image" src={rishabh}></img>
                 <div className="icons">
-                   <Link to="https://www.facebook.com/rishabh.sevta/"><FaFacebook></FaFacebook></Link>
-                    <Link to="https://github.com/rishabhsevta"><FaGithub></FaGithub></Link>
-                    <Link to="https://www.instagram.com/rishabhsevta/"><FaInstagram></FaInstagram></Link>
-                    <Link to="http://linkedin.com/in/rishabh-sevta-923b2a208"><FaLinkedinIn></FaLinkedinIn> </Link>     
+                   <Link to={constants.FACEBOOK}><FaFacebook></FaFacebook></Link>
+                    <Link to={constants.GITHUB}><FaGithub></FaGithub></Link>
+                    <Link to={constants.INSTAGRAM}><FaInstagram></FaInstagram></Link>
+                    <Link to={constants.LINKEDIN}><FaLinkedinIn></FaLinkedinIn> </Link>     
                 </div>
             </div>
             <div className="box2">
