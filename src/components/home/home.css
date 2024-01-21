@@ -75,11 +75,24 @@
         align-items: center;
     }
     .home-main >.box1{
-        top: 4%;
+        top: -5%;
     }
     .box2{
         transform: translateY(-40%);
-    position: absolute;
-    left: 10%;
+        position: absolute;
+        left: 10%;
+    }
+    .home-main .box1 .icons a{
+        padding-left: 25%;
+        position: relative;
+        left: -80%;
+        font-size: 1.7rem;
+    }
+    .home-main .box1 .icons{
+        top: 5%;
+        position: relative;
+    }
+    .home-main .box1{
+        left: 0;
     }
 }

@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import "./home.css";
-import rishabh from './rishabhsevta.jpg'
+import rishabh from './rishabhsevta.jpeg'
 import {FaHeart,FaInstagram,FaLinkedinIn,FaGithub,FaFacebook} from 'react-icons/fa';
 import axios from "axios";
 
