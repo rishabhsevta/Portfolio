@@ -35,8 +35,8 @@ const Home = () => {
             <div className="box2">
                 <span id="line1">Hello, It's Me</span><br/>
                 <span id="line2">Rishabh Sevta</span><br/>
-                <span id="line3">And I'm </span>
-                <span id="line4">MERN Developer</span><br/><br/>
+                <span id="line3">And I <FaHeart className="heart"/> </span>
+                <span id="line4">Web Development </span><br/><br/>
                 <button id="download-cv" onClick={handleDownloadCv}>Download Cv</button>
             </div>
        </div>

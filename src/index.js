@@ -5,8 +5,8 @@ import {createBrowserRouter, RouterProvider, Outlet} from "react-router-dom";
 import Header from "./components/header/Header";
 import Project from "./components/project/Project";
 import Home from "./components/home/Home";
-import Xyz from "./components/xyz/Xyz";
 import reportWebVitals from "./reportWebVitals";
+import Certificates from "./components/certificate/Certificates";
 
 const AppLayout = () =>{
     return (
@@ -31,8 +31,8 @@ const appRouter = createBrowserRouter([
                 element:<Project/>,
             },
             {
-                path:"/xyz",
-                element:<Xyz/>
+                path:"/certificates",
+                element:<Certificates/>
             }
         ]
     }

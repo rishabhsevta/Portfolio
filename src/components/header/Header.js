@@ -12,7 +12,7 @@ const Header = () => {
                 <ul>
                     <li ><Link className={location === '/' ?'underline':''} to={"/"}>Home</Link></li>
                     <li ><Link className={location === '/project' ? 'underline': ''} to={"/project"}>Project</Link> </li>
-                    <li ><Link className={location === '/xyz' ? "underline" : ''} to={"/xyz"}>xyz</Link> </li>
+                    <li ><Link className={location === '/certificates' ? "underline" : ''} to={"/certificates"}>Certificate</Link> </li>
                 </ul>
             </div>
         </div>
