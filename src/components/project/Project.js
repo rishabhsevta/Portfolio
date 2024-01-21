@@ -3,15 +3,14 @@ import './project.css';
 import { useState } from "react";
 import constants from "../../constants/constants";
 
-import Project_header from "./project_header/Project_header";
+// import Project_header from "./project_header/Project_header";
 
 const Project = ()=>{
-    const [isChecked,setIsChecked] = useState(false);    
+  const [isChecked,setIsChecked] = useState(false);    
 
 const handleChange =async(e)=>{
   setIsChecked(isChecked?false:true);
   try{
-    setIsLoading(true);
     let data = await fetch(constants.API,{
     method:'PUT',
     headers: {
@@ -19,7 +18,7 @@ const handleChange =async(e)=>{
     },
     body:JSON.stringify({"value":e.target.value})
   });
-    data = await data.json();
+    // data = await data.json();
   }
   catch(err){
     console.log(err);
@@ -28,7 +27,6 @@ const handleChange =async(e)=>{
 
 
     return(<>
-          {/* <Project_header ></Project_header> */}
         <div className="project-main">
         <label>
             <input type="checkbox" onChange={handleChange}></input>
